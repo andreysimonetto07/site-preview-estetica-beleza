@@ -1,9 +1,22 @@
 # Preview Estética & Beleza — Agência
 
-Dois previews comerciais de landing page para o nicho **estética e beleza**.
+Site demonstrativo completo criado para apresentar ao potencial cliente como uma presença digital profissional pode funcionar para o **cliente final dele**.
 
-- `index.html` — Preview 01
-- `preview-2.html` — Preview 02
+## Estrutura
+
+- `index.html` — conceito LUME
+- `preview-2.html` — conceito Maison Rosa
+- `tratamentos.html`
+- `studio.html`
+- `agendar.html`
+- `styles.css` — identidade visual própria do nicho
+- `app.js` — interações específicas
 - `vercel.json` — configuração para publicação
+
+## Direção
+
+Este projeto não é uma apresentação da Agência. Ele simula o site que o cliente contratante poderia ter para vender aos próprios clientes.
+
+Os nomes de marcas, imagens e dados exibidos são demonstrativos. Antes de virar site oficial, devem ser substituídos por identidade, fotos, WhatsApp, serviços, depoimentos e informações reais da empresa.
 
 Projeto demonstrativo da **Agência** — Andrey Simoneto e Pedro Henrique.
