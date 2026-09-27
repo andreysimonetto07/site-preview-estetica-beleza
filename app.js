@@ -1,14 +1,1 @@
-
-const nav=document.querySelector('.site-nav');
-const menuBtn=document.querySelector('.menu-btn');
-const navLinks=document.querySelector('.nav-links');
-window.addEventListener('scroll',()=>nav?.classList.toggle('scrolled',window.scrollY>20),{passive:true});
-menuBtn?.addEventListener('click',()=>navLinks?.classList.toggle('open'));
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks?.classList.remove('open')));
-const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
-  const id=a.getAttribute('href'); if(id.length<2)return;
-  const el=document.querySelector(id); if(!el)return;
-  e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'});
-}));
+const h=document.querySelector('.header'),m=document.querySelector('.menu'),n=document.querySelector('.nav');window.addEventListener('scroll',()=>h?.classList.toggle('scrolled',scrollY>20),{passive:true});m?.addEventListener('click',()=>n?.classList.toggle('open'));document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>n?.classList.remove('open')));const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));document.querySelectorAll('[data-wa]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(a.dataset.wa||'Olá! Vim pelo site e gostaria de agendar uma avaliação.'),'_blank','noopener')}));const f=document.querySelector('#beautyForm');f?.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(f);const msg=`Olá! Quero agendar uma avaliação.\nNome: ${d.get('nome')}\nInteresse: ${d.get('interesse')}\nMelhor período: ${d.get('periodo')}\nObservação: ${d.get('obs')||'-'}`;window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(msg),'_blank','noopener')});
